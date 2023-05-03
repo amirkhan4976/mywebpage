@@ -1,0 +1,36 @@
+:root {
+    --header-footer-color: #102b06;
+    --header-footer-font-color: #b9b0c2;
+    --body-background-color: #242920;
+    --body-font-color: #a3c0d9;
+}
+
+* {
+    background-color: var(--body-background-color);
+    text-decoration: none;
+    color: var(--body-font-color);
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+    margin: 1em;
+}
+
+header, footer, header ul, header p, footer p, header a, footer a{
+    width: auto;
+    background-color: var(--header-footer-color);
+    color: var(--header-footer-font-color);
+
+}
+
+
+header, footer {
+    border: 1px groove rgb(21, 94, 15);
+}

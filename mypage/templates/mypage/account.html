@@ -1,0 +1,9 @@
+{% extends "mypage/base.html" %}
+
+{% block title %}User Account{% endblock %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static '/mypage/css/account.css' %}">
+<p>Please <a href="{% url 'login' %}">login</a> or <a href="{% url 'create-account' %}">create</a> account.</p>
+
+{% endblock %}

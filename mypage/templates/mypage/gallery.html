@@ -1,0 +1,25 @@
+{% extends "mypage/base.html" %}
+{% block title %}Gallery - Photos{% endblock %}
+
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static "mypage/css/gallery.css" %}">
+
+<div class="grid-wrapper">
+    {% for photo in photos %}
+        <div>
+            <img src="{{ photo.image.url }}" alt="{{photo.title}}">
+        </div>
+    {% endfor %}
+</div>
+
+<div>
+    <h1>Upload photos</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Upload</button>
+    </form>
+</div>
+{% endblock %}

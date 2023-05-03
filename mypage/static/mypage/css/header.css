@@ -1,0 +1,16 @@
+.main-header {
+    margin-bottom: 1.5em;
+}
+
+.header-navigation {
+    text-align: center;
+}
+.header-navigation-unordered-list {
+    list-style: none;
+    padding: 0;
+}
+
+.header-navigation-unordered-list li {
+    display: inline;
+    margin-left: 10px;
+}

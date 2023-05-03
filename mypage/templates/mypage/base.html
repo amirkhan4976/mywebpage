@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'mypage/css/base.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'mypage/css/header.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'mypage/css/footer.css' %}">
+    <meta charset="UTF-8">
+    <title>{% block title %}Amir Khan{% endblock %}</title>
+</head>
+<body>
+{% include "mypage/header.html" %}
+<main>
+    {% block content %}
+
+    {% endblock %}
+
+</main>
+{% include "mypage/footer.html" %}
+</body>
+</html>

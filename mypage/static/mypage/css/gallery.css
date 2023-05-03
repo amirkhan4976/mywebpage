@@ -1,0 +1,16 @@
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1em;
+}
+/*
+.grid-wrapper div {
+    height: auto;
+    width: 100%;
+}
+*/
+.grid-wrapper img {
+    height: auto;
+    width: 100%;
+    border-radius: 2%;
+}

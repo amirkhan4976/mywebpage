@@ -1,0 +1,18 @@
+{% extends "mypage/base.html" %}
+{% block title %}User Login{% endblock %}
+
+{% block content %}
+<div>
+  <form method="POST" action="{% url 'login' %}">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <input type="submit" value="Login">
+  </form>
+</div>
+
+<div>
+  <p>Don't have account? Create <a href="{% url 'create-account' %}" style="color:aquamarine;">here</a></p>
+</div>
+{% endblock %}

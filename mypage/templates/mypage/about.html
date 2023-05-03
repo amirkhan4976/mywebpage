@@ -1,0 +1,11 @@
+{% extends "mypage/base.html" %}
+
+{% block title %}About Me{% endblock %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'mypage/css/about.css' %}">
+<img class="image-main" src="/media/profile_photo/compressed_img/20230422_15204444-comp.jpg">
+<p>My name is Amir Khan, and I'm a devout Muslim who is proud to follow the teachings of Islam. I was born and raised in India, and I currently reside in the beautiful city of Bangalore. After completing my 10+2 education, I decided to pursue my passion for computer science and am currently studying the subject. I have an excellent grasp of programming languages like Python, Django, C, and C++, and have also completed a course in digital marketing. I'm particularly interested in the fields of cybersecurity and AI/machine learning, and I'm always seeking out new opportunities to learn more about these exciting fields.</p>
+<p>When I'm not studying or working, you can often find me reading books, exploring new technologies, or spending time with my family and friends. I believe that life is all about balance, and I try my best to maintain a healthy work-life balance. I'm a firm believer in the power of hard work and perseverance, and I always strive to achieve my goals with honesty and dedication. I'm excited about the future and am eager to see where my passion for technology will take me in the years to come.</p>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "mypage/base.html" %}
+{% block title %}Amir Khan{% endblock %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'mypage/css/index.css' %}">
+<div class="first-section">
+    <img class="main-photo" src="media/profile_photo/compressed_img/20230422_1537266-comp.jpg">
+    <p>Hi!<br>This is Amir Khan. <br>Everyone is doing well.</p>
+</div>
+
+<div class="second-photo-section">
+    <h2 class="section-photo-header">Below are some of my photos :)</h2>
+    <div class="grid-photos">
+        {% for image in image_lists %}
+        <div>
+            <img src="{{ images_directory }}{{ image }}">
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
