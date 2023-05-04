@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect
 from django.views import View
 from .forms import PhotoForm, UserAccountCreateUpdateForm
 from .models import Photo
@@ -13,7 +13,7 @@ import os
 class HomePageView(View):
     
     def get(self, request):
-        images_directory = "media/myphotos/output_folder/"
+        images_directory = "mypage/static/mypage/img/myphotos/output_folder/"
         image_files = os.listdir(images_directory)
         ctx = {"image_lists": image_files, "images_directory": images_directory}
         return render(request, template_name="mypage/index.html", context=ctx)

@@ -1,12 +1,11 @@
 from django.db import models
-from django.core.validators import EmailValidator
 from django.contrib.auth.models import User
 
 
 # Create your models here.
 class Photo(models.Model):
     title = models.CharField(max_length=255)
-    image = models.ImageField(upload_to="media/user_photos/")
+    image = models.ImageField(upload_to="mypage/static/mypage/img/user_photos/")
     uploaded_at = models.DateTimeField(auto_now_add=True)
 
     def save(self, *args, **kwargs):

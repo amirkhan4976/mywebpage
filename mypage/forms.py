@@ -11,6 +11,7 @@ class PhotoForm(forms.ModelForm):
 class UserAccountCreateUpdateForm(forms.ModelForm):
     password = forms.CharField(widget=forms.PasswordInput)
     confirm_password = forms.CharField(widget=forms.PasswordInput)
+
     class Meta:
         model = UserAccount
         fields = ["first_name", "last_name", "email", "username", "password", "confirm_password"]
