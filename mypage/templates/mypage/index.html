@@ -14,7 +14,7 @@
     <div class="grid-photos">
         {% for image in image_lists %}
         <div>
-            <img src="{{ images_directory }}{{ image }}">
+            <img src="{% static image_files__in_static_dir %}{{ image }}">
         </div>
         {% endfor %}
     </div>

@@ -13,9 +13,12 @@ import os
 class HomePageView(View):
     
     def get(self, request):
-        images_directory = "mypage/static/mypage/img/myphotos/output_folder/"
-        image_files = os.listdir(images_directory)
-        ctx = {"image_lists": image_files, "images_directory": images_directory}
+        image_files__in_static_dir = "mypage/img/myphotos/output_folder/"
+        absolute_images_directory = "mypage/static/" + image_files__in_static_dir
+        image_files = os.listdir(absolute_images_directory)
+        print(f"image_files__in_static_dir: {image_files__in_static_dir}")
+        print(f"Image files: {image_files}")
+        ctx = {"image_lists": image_files, "image_files__in_static_dir": image_files__in_static_dir}
         return render(request, template_name="mypage/index.html", context=ctx)
 
 
